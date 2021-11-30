@@ -137,7 +137,7 @@ public class Peminjaman {
         return ListPeminjaman;
     }
     
-    public ArrayList<Peminjaman> search3(String keyword){
+    /*public ArrayList<Peminjaman> search3(String keyword){
         ArrayList<Peminjaman>ListPeminjaman=new ArrayList();
         ResultSet rs=DBHelper.selectQuery("SELECT "
                 +"  b.idbuku as idbuku "
@@ -174,7 +174,7 @@ public class Peminjaman {
                 +"  FROM peminjaman p "
                 +"  LEFT JOIN anggota a on p.idanggota=a.idanggota"
                 +"  LEFT JOIN buku b on p.idbuku=b.idbuku "
-                +"  WHERE a.idanggota LIKE '%"+keyword+"%' ");
+                +"  WHERE a.idanggota LIKE '"+keyword+"' ");
         try{
             while(rs.next()){
                 Peminjaman pmj=new Peminjaman();
@@ -195,7 +195,7 @@ public class Peminjaman {
             e.printStackTrace();
         }
         return ListPeminjaman;
-    }
+    }*/
     
     public ArrayList<Peminjaman> search(String keyword){
         ArrayList<Peminjaman>ListPeminjaman=new ArrayList();
@@ -252,6 +252,8 @@ public class Peminjaman {
             this.idpeminjaman=DBHelper.insertQueryGetId(SQL);
         }else{
             String SQL="UPDATE peminjaman SET "
+                    +"  idanggota = '"+this.getAnggota().getIdanggota()+"', "
+                    +"  idbuku = '"+this.getBuku().getIdbuku()+"', "
                     +"  tanggalpinjam = '"+this.tanggalpinjam+"', "
                     +"  tanggalkembali = '"+this.tanggalkembali+"' "
                     +"  WHERE idpeminjaman = '"+this.idpeminjaman+"'";

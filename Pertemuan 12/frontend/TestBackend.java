@@ -26,7 +26,7 @@ public class TestBackend {
             System.out.println("Nama: " + k.getNama() + ", Ket: " + k.getKeterangan());
         }*/
         
-        /*Kategori novel = new Kategori().getById(15);
+        Kategori novel = new Kategori().getById(15);
         Kategori referensi = new Kategori().getById(16);
         Buku buku1 = new Buku(novel, "Timun Mas", "Elex Media", "Bang Supit");
         Buku buku2 = new Buku(referensi, "Metode Linier", "Springer", "Alex Baldwin");
@@ -46,7 +46,7 @@ public class TestBackend {
         // test search
         for (Buku b : new Buku().search("timun")) {
             System.out.println("Kategori: " + b.getKategori().getNama() + ", Judul: " + b.getJudul());
-        }*/
+        }
         
         /*Anggota agt1 = new Anggota("Jud", "Mulyodadi", "08675555xxxx");
         Anggota agt2 = new Anggota("Mukhtar", "Mulyodadi", "08674444xxxx");
@@ -69,7 +69,7 @@ public class TestBackend {
             System.out.println("Nama: " + a.getNama() + ", Alamat: " + a.getAlamat()+", Telepon: "+a.getTelepon());
         }*/
         
-        Buku novel = new Buku().getById(7);
+        /*Buku novel = new Buku().getById(7);
         Buku referensi = new Buku().getById(8);
         Anggota jud=new Anggota().getById(8);
         Anggota mukhtar=new Anggota().getById(9);
@@ -94,6 +94,6 @@ public class TestBackend {
         for (Peminjaman p : new Peminjaman().search("mukhtar")) {
             System.out.println("Anggota: " + p.getAnggota().getNama() + ", Judul buku: " + p.getBuku().getJudul()
                     +", Tanggal Pinjam: "+p.getTanggalpinjam()+", Tanggal Kembali: "+ p.getTanggalkembali());
-        }
+        }*/
     }
 }
